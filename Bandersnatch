@@ -1,0 +1,426 @@
+/**
+ *Made by CAROLINE BARRINEAU
+ */
+
+
+import java.util.Scanner;
+
+public class Bandersnatch  {
+    
+  public static void main(String[] args) { 
+	 
+	  String s = System.lineSeparator(); //separates lines, will be used a lot
+	  Scanner kb = new Scanner(System.in);
+
+	System.out.println("Let's see how fast you catch on");
+	System.out.println("What's your favorite color?");
+	String[] color = {"a) pink", "b) purple", "c) blue", "d) red", "e) green", "f) orange" };
+	 int size = color.length;
+	 for (int p = 0; p < size; p++)
+	 { 
+		 System.out.println(color[p]);
+	 }
+	 String favColor = kb.nextLine();
+	
+	 if (favColor.matches("a|b|c|d|e|f")) {} //if it matches, it does nothing but carries on
+	 else {
+		 System.out.println("Okay fancy pants, that's not an option."); //makes them start over kinda
+		 System.out.println("Now, I'll ask ya again. What's your favorite color?");
+		 favColor = kb.nextLine();
+	 }
+	 System.out.println("Cool color choice, but you get the idea.");
+
+	System.out.println("Now, please enter your name.");
+	
+	String name = kb.nextLine(); //records their name
+	System.out.println("*In this game you will be given options on what to do, so the experience is in your hands.");
+    System.out.println("........");
+    System.out.println(s);
+	System.out.println("*Finally made it back to camp. Hallelujah. That was one heck of a battle.");
+	System.out.println("*How pitiful the rest of the group was. They just ran away!");
+	System.out.println("*Luckily a local with a  black cape jumped in and saved me...");
+	
+	System.out.println("*But they don't have to know that.");
+	System.out.println("*I'm gonna need to find a better guild if I want to kill my first dragon...");
+	System.out.println(s);
+	System.out.println("Jeremiah: Oh God! I'm so gald you made it back. I thought you woulda died back there, " + name + ".");
+    
+    
+    System.out.println(s);
+    System.out.println("What would you like to say?");
+    
+    
+    String firstRound[] = {
+    		" a) Yeah, especially since you left me for dead...",
+    		" b) Those guys? That was nothing. You should see me in a real fight",
+    		" c) Yeah, me too."};
+    
+	 for (int p = 0; p < firstRound.length; p++)
+	 { 
+		 System.out.println(firstRound[p]);
+	 }
+	
+	 String FRC = kb.nextLine();  //FRC means First Round Choice
+	 
+	 
+	 System.out.println(s);
+	 if (FRC.equalsIgnoreCase("a")) {
+		 System.out.println("Jeremiah: Hey! Well Maybe if you moved a little faster, you won't get stranded! ");
+		 System.out.println("Jeremiah: Besides, everyone here knows you're not a fighter.");
+		 System.out.println("Jeremiah: You're just better with your puzzles and stuff anyways");
+		 
+	 }
+	 else if (FRC.equalsIgnoreCase("b")) {
+		 System.out.println("Jermiah: Hahaha, you wouldn't even last against a fairy!");
+		 System.out.println(name + ": Hey those things are ferocious!" );
+		 
+	 }
+	 else if (FRC.equalsIgnoreCase("c")) {
+		 System.out.println("Jermiah: Dang, sorry man, I thought you could hold your own.");
+	 }
+	 
+	
+	 System.out.println("Jermiah: Well anyways, before you got back it seems like some bandits got ahold of our campsite.");
+	 System.out.println("Jermiah: Even took my good sword, ya know, the one I killed the ringed-bull with!");
+	 System.out.println(s);
+	 System.out.println("*This was an impressive feat. But his ego is large enough.");
+	 System.out.println(s);
+	 System.out.println("What would you like to do?");
+	 
+	 String[] toDo = {
+			 "a) Ask Jeremiah to go to another town with you to find a new guild", 
+			 "b) See if Jeremiah wants to get food with you in town",
+			 "c) explore the woods"};
+	 
+	 for (int p = 0; p < toDo.length ; p++)
+	 { 
+		 System.out.println(toDo[p]);
+	 }
+	 
+	 
+	 String toDoNext = kb.nextLine();
+	  
+	 if (toDoNext.equalsIgnoreCase("a")) { ///what happens with what the person chose
+		 
+		 System.out.println("Me: Look J, this place and this guild is falling apart.");
+		 System.out.println("Me: If we don't leave soon- ");
+		 System.out.println("Jeremiah: Man.... Can't we go another time? It's already pretty late...");
+		 System.out.println("*Thinking* Hmmmm... he may only hold me back in the end....");
+		 System.out.println("*Thinking* I will have to sneak away at night.");
+		 //lies to him
+		 System.out.println("Me: Okay, we'll go another time.");
+		 System.out.println(s);
+		 System.out.println("I don't wait for him. Time to move on.");
+		 System.out.println("I leave the camp with my things and walk until I can't.");
+		 // scene cut/ time passes
+		 System.out.println(s);
+		 System.out.println("Oh wow, the sun is already coming up...");
+		 System.out.println("I guess I'll stop here. I wonder what the name of this town is?");
+		 System.out.println("> Enter a name for the town.");
+		 ///make up a name to the town
+	
+		 String nameOfTown = kb.nextLine();
+		 System.out.println("Oh! This sign says this is "+ nameOfTown);
+		 System.out.println("Looking around, this place seems pretty cozy.");
+		 System.out.println("I'll eat and then check into this Inn");
+		 
+		 ///this outcome will lead to finding an Inn to stay at in the next town
+		 ///finds black cape man
+		 
+		 System.out.println("I guess this is a sit anywhere you want kind of BnB...");
+		 System.out.println(s); //cut scene
+		 System.out.println("Me: Excuse me, sir. May I order with you?");
+		 System.out.println("Waiter: Of course, what would you like to eat today?");
+		 
+		 String[] toEat = {
+				 "a) The reuben ", 
+				 "b) A PB&J",
+				 "c) Eggs and Steak",
+				 "d) Pork Stew"};
+		 
+		 		for (int p = 0; p < toEat.length; p++)
+		 		{ 
+		 			System.out.println(toEat[p]);
+		 		}
+		 			String gonnaEat = kb.nextLine();
+	             
+		 		if (gonnaEat.matches("a|b|c|d") ) {}
+		 		
+		 		else {
+		 			System.out.println("Sorry that is not on the menu");
+		 			gonnaEat = kb.nextLine();
+		 		}
+		 		
+		 		System.out.println(s);
+		 		System.out.println("Waiter: Coming right out!");
+		 		System.out.println(s);
+		 		System.out.println("As I ate my food, a familiar figure rushed by the window.");
+		 		System.out.println("The man with the black hood!");
+		 		System.out.println("Do you follow the man or was it nothing worth getting worked up over?");
+		 		System.out.println("Follow the man? Yes or No.");
+		 		
+		 		String answer = kb.nextLine();
+		 		if (answer.equalsIgnoreCase("yes")) {
+		 			//now he must find hims and answer his riddle
+		 			System.out.println(s);
+		 			System.out.println("Me: Waiter!! I must go, I left money on the table!");
+		 			System.out.println("*I try to follow him but there are too many people in the way.");
+		 			System.out.println("*Wait a second...");
+		 			System.out.println("*That alleyway!");
+		 			System.out.println("*I shove through people and make my way towards the man in black.");
+		 			System.out.println("Me: Sir!! Sir! I must speak with you!");
+		 			System.out.println("*He turns around and reveals he is actually a she!");
+		 			System.out.println("Me: Oh pardon me ma'am!");
+		 			System.out.println("Woman: Watch where you're going!");
+		 			System.out.println("*On a leap of faith....");
+		 			System.out.println("Me: You.... you aren't, by chance, the person who fought off those men the other day");
+		 			System.out.println(" 	are you?");
+		 			System.out.println("*She... She nodded! She is the master fighter!");
+		 			System.out.println("Me: Please, Please, I will do anything to be your apprentice!");
+		 			System.out.println(s);
+		 			System.out.println("Woman: Hello " + name + ", I am Bandersnatch. I have trained for years among the best.");
+		 			System.out.println("Bandersnatch: How will you prove your worthy?");
+		 		
+		 			System.out.println("*I've never been quite good at much...");
+		 			System.out.println("*BUT!");
+		 			System.out.println("Me: I can do riddles!");
+		 			///riddle me this
+		 			System.out.println(s);
+		 			/////think of a riddle
+		 			
+		 			///if he gets it right the girl will teach his how to slay a dragon
+		 			//gets the choice of slaying the dragon
+		 			//if user chooses to slay, the end, not to slay, died, the end
+		 			////Two different endings??
+		 			System.exit(0);
+		 		}
+		 		
+		 		else {
+		 			System.out.println("The food was good, I wonder if there are any jobs around here?");
+		 			System.out.println("There are no guilds in the town but the people are nice and");
+		 			System.out.println("	the blacksmith saw my sword and offered me a well paying job");
+		 			System.out.println("I almost wouldn't mind staying here for a while.");
+		 			System.out.println(s);
+		 			System.out.println("You married the Inn keeper, Jane.");
+		 			System.out.println("Your glory days were over in the fields but now you are a well known blacksmith");
+		 			System.out.println("People from all over come to you for your work.");
+		 			System.out.println("Be proud. Your life was good.");
+		 			System.out.println("The end");
+		 			System.exit(0);
+		 		}	
+		 ///follows him (if yes, they meet; if no, user stays in the town as a blacksmith 
+		 					///waiting for his day to come
+		 		
+		 ///if they meet, black cape man teaches him to fight if he can solve a boolean puzzle
+		 /// kills a dragon in the end
+	 }else if (toDoNext.equalsIgnoreCase("b")) {
+		 System.out.println("Jeremiah: Don't have to ask me twice!");
+		 System.out.println(s);
+		 System.out.println("We sit down at a local 'resturant'.");
+		 System.out.println("Been here too many times.");
+		 System.out.println("Me: Hey Larry. Can I order with you?");
+		 System.out.println("Larry the Waiter: Sure bud, whatchya having today?");
+		 
+		 String[] toEatHere = {
+				 "a) pork chops ", 
+				 "b) BBQ",
+				 "c) Fish and chips",
+				 "d) Roast chicken"};
+		 for (int p = 0; p < toEatHere.length; p++)
+	 		{ 
+	 			System.out.println(toEatHere[p]);
+	 		}
+	 			String gonnaEatHere = kb.nextLine();
+          
+	 		if (gonnaEatHere.matches("a|b|c|d") ) {}
+	 		
+	 		else {
+	 			System.out.println("Sorry that is not on the menu");
+	 			gonnaEatHere = kb.nextLine();
+	 		}
+	 		
+	 		
+	 			System.out.println("Comin right up fellas.");
+		 ///They go into town and get food
+	 			System.out.println(s);
+	 			System.out.println("Jeremiah: OOOOOOWEE, That was some good roast chicken, Larry!");
+	 			System.out.println("*Suddenly a figure rushed by the window of the resturant.");
+	 			System.out.println("*Could it be?");
+	 			System.out.println("Me: J! J! Get up, follow me!");
+	 			System.out.println("Jeremiah: Now?" );
+	 			System.out.println("Me: YES NOW!");
+	 			///user spots black cape man but cannot get to him
+	 			System.out.println("*Out in the street... there's too many people..");
+	 			System.out.println("Jeremiah: W-What are we after? What'd ya see?");
+	 			System.out.println("Me: It's- It's the man from earlier... the one who saved me...");
+	 			System.out.println("*I look back and forth but he was gone.");
+	 			System.out.println("Jeremiah: Oh Jesus, I though we were after something real!");
+	 			
+		 ///they return to camp 
+	 			System.out.println(s);
+	 			System.out.println("Later that night, back at camp...");
+	 			System.out.println(s);
+	 			System.out.println("*I have to get out of here");
+	 			System.out.println("*But these people are my life for the past two years...");
+	 			System.out.println("Do I go (a) find another place or (b) stay here?");
+	 			String decision = kb.nextLine();
+	 				 //// In the middle of the night, he has the option of running away
+	 				if (decision.equalsIgnoreCase("a")) {
+	 					System.out.println("... It's time");
+	 					//he runs away from the camp
+	 				} else {
+	 					System.out.println("The next morning I find myself staring at the sky.");
+	 					System.out.println("Where's my tent??");
+	 					System.out.println("I've been robbed!");
+	 					System.out.println("Oh no, everything - and everyone - is gone!");
+	 					System.out.println("I guess it really is time to move on...");
+	 					System.out.println(s);
+	 					System.out.println("While walking, I heard a noise....");
+	 					System.out.println("Pirates?? and Gremlins?? Working together??");
+	 					System.out.println("Me: I dont have anything! Please spare me!");
+	 					System.out.println("A Pirate: But then what would we have for lunch?");
+	 				
+	 					System.out.println("Me: How... How about if I can solve one of your riddles... you let me go?");
+	 					System.out.println("*The five of them laugh");
+	 					System.out.println("Another pirate: You know, pirates are known for thee mysteries?");
+	 					System.out.println("Me: P-Prove it!");
+	 					System.out.println("A gremlin points a gun to my head");
+	 					System.out.println("A third pirate: If you can't solve me riddle, you're dead. Three tries");
+	 					System.out.println("Me: Okay, shoot- WAIT DONT REALLY SHOOT JUST ASK ME YOUR RIDDLE!");
+	 					System.out.println(s);
+	 					System.exit(0);
+	 					///// a pirates riddle
+	 					////gets it right, the pirates make him their friend
+	 					///wrong and tries goes down 1
+	 					////wrong 3 times and he gets shot
+	 					
+	 					// System.out.println("The end");
+	 				}
+	 				
+	 				
+	 				System.out.println("The journey is long but decently warm");
+	 				System.out.println("After hours of walking, I see a busy town just over the hill!");
+	 				//if he does, he finds a different guild and goes off with them
+	 				/// the other guild gives him cool things
+	 				
+	 				System.out.println(s);
+	 				System.out.println("A Stranger: Ah ha!");
+	 				System.out.println("*This stranger is pointing his sword at me.");
+	 				System.out.println("*Bruh, I just got here");
+	 				System.out.println("Me: May I -uh -help you?");
+	 				System.out.println("Him: No, no, no. Can you help us?");
+	 			
+	 				System.out.println("Yes or no?");
+	 				String goWithHim = kb.nextLine();
+	 					
+	 				
+	 				if (goWithHim.equalsIgnoreCase("yes")) {
+	 						System.out.println("Sure, but there's no need for the sword");
+	 						System.out.println(s);
+	 						System.out.println("They bring me- no longer at sword point and with many smiles- ");
+	 						System.out.println("  		to a magnificent building.");
+	 						System.out.println("People walked in and out doing business, trading, and training");
+	 						System.out.println("Me: Is- Is this your guild, sir?");
+	 						System.out.println("Him: Call me, Ron. And yes this is the Bandersnatch guild.");
+	 						///tell more about how he was accepted into the guild later
+	 						System.out.println(s);
+	 						System.out.println("Years have passed since the day I joined their guild.");
+	 						System.out.println("However");
+	 						System.out.println("Today-the day I've been training for my whole life-");
+	 						System.out.println("is the day I slay a dragon");
+	 						System.out.println("Bandersnatch Guild members Magnus, Ron, Stephanie, and Vin are joining me.");
+	 						System.out.println("Wow, I never knew how much pressure is on me today.");
+	 						System.out.println(s);
+	 						System.out.println("In the woods, we are in dragon territory");
+	 						System.out.println("Me: I'm feeling nervous...");
+	 						////Option to have him chicken out and loose his spot in the guild or kill the dragon
+	 						System.out.println("The crew leads me to cave");
+	 						System.out.println("A gignatic ROAR echoes through the cave");
+	 						System.out.println("Magnus: Yo," + name+ " are you sure you're up to solve the dragon's riddle?");
+	 						System.out.println("Me: Well there's no going back now");
+	 						System.out.println("Obviously the Dragon: WHO COMES INTO MY HOME?");
+	 						
+	 						System.exit(0);
+	 						///// figure out a riddle for the dragon
+	 					} else {
+	 						System.out.println("Me:Sir, can I come back another da-");
+	 						System.out.println("*Pain enters my chest");
+	 						System.out.println("*I look down and I am impalled by his sword");
+	 						System.out.println("Him: No one denies the Bandersnatch Guild");
+	 						System.out.println("The end");
+	 						/// ending !!!!
+	 						System.exit(0); 
+	 					}
+	 			
+	 }else if (toDoNext.equalsIgnoreCase("c")){
+		 System.out.println("I mean, I might as well make myself useful...");
+		 System.out.println("I can do more than riddles...");
+		 System.out.println("Yeah, I can collect stuff!");
+		 System.out.println("Like...");
+		 System.out.println("a) stick");
+		 System.out.println("b) berries");
+		 String choice = kb.nextLine();
+		 		if (choice.equals("a"));{
+		 			System.out.println("See, look, these sticks would be great for, like, a fire... I guess");
+		 			System.out.println("1, 2 Buckles my shoe");
+		 			System.out.println("3, 4 Lock my door");
+		 			System.out.println("5, 6 pick up holy sh-");
+		 			System.out.println("No more than 10 yards ahead of me is an angry, angry bandersnatch");
+		 			System.out.println("Are they like bears? Do I just play dead?");
+		 			System.out.println("S-should I pretend to be bigger than it??");
+		 			System.out.println("Should I a) play dead or b) act bigger than it?");
+		 			String theLastChoice = kb.nextLine();
+		 				if (theLastChoice.equals("a")) {
+		 					System.out.println("What if.. what if I just.... slowly... very sl- hey dont come towards me!");
+		 					System.out.println("Im acting dead, you stupid dragon, go away!");
+		 					System.out.println("For those playing at home, bandersnatches are not ones to be yelled at");
+		 					System.out.println("The end");
+		 					System.exit(0);
+		 					
+		 				}
+		 				else {
+		 					System.out.println("I raise the sticks above my head and try to scare it off");
+		 					System.out.println("It does not like that...");
+		 					System.out.println("oh no. Seems like I'm literal toast");
+		 					System.out.println("The end");
+		 					System.exit(0);
+		 				}
+		 		}
+		 		}	else {
+		 			System.out.println("Ooooooooh, bandersnatch berries!");
+		 			System.out.println("I love these things, I could eat them alllll day");
+		 			System.out.println("As i pop a few berries in my mouth, I see the dragon, watching my moves");
+		 			System.out.println("Hey, there.......");
+		 			System.out.println("Gotta Blast.");
+		 			System.out.println("Hey Hey Hey dont sniff me, I'm not for sniffing!");
+		 			System.out.println("Hey you little- those are MY berries!");
+		 			System.out.println("Don't give me that face.");
+		 			System.out.println("OK OK fine you can have some but only cause you're kinda cute");
+		 			System.out.println("Maybe I've been wrong about wanting to slay a dragon my whole life....");
+		 			System.out.println("The end");
+		 			System.exit(0);    
+		 			
+		 		}
+		 		
+		 
+		 ///if he collects berries he can feed them to a dragon and become friends 
+		 ///sticks means that he will fight the dragon
+		 //becomes friends-> he will defend the dragon against the guilds
+		 ///he dies if he fights the dragon - fatality 
+  
+  }
+  
+  
+}
+
+	 
+	 
+	 /* 
+	 String[] toDo = {"a) ", "b) ", "c) ", "d) ", "e) ", "f) " };
+	
+	 for (int p = 0; p < size.length; p++)
+	 { 
+		 System.out.println(color[p]);
+	 }
+	 String  = kb.nextLine();
+	 *
